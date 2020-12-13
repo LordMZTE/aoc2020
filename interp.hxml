@@ -1,0 +1,7 @@
+-cp src
+-m Main
+
+-L littleBigInt
+
+-debug
+--interp
