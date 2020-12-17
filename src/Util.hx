@@ -1,6 +1,5 @@
 import sys.io.File;
 import haxe.io.Path;
-import haxe.macro.Context;
 
 class Util {
 	public static function inputForClassName(name:String):Array<String> {
@@ -18,7 +17,7 @@ class Util {
 	}
 
 	public static macro function input():ExprOf<Array<String>> {
-		var localClass = Context.getLocalClass().get().name;
+		var localClass = haxe.macro.Context.getLocalClass().get().name;
 		return macro {Util.inputForClassName($v{localClass});};
 	}
 }
