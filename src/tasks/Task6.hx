@@ -1,6 +1,5 @@
 package tasks;
 
-import haxe.ds.HashMap;
 import polygonal.ds.IntHashSet;
 import Util.Task;
 
@@ -9,11 +8,11 @@ using Util.StaticExt;
 using Lambda;
 
 class Task6 implements Task {
-	public var name = "Day 6: Custom Customs";
+    public var name = "Day 6: Custom Customs";
 
-	public function new() {}
+    public function new() {}
 
-	public function part1() {
+    public function part1() {
         var input = Util.input();
         var current = new IntHashSet(32);
         var acc = 0;
@@ -34,7 +33,7 @@ class Task6 implements Task {
         Sys.println(acc);
     }
 
-	public function part2() {
+    public function part2() {
         var input = Util.input();
         var currentQ = [];
         var currentG = [];
