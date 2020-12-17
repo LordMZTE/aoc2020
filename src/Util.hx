@@ -22,6 +22,21 @@ class Util {
 	}
 }
 
+class StaticExt {
+    public static function unique<T>(array:Array<T>):Array<T> {
+		final unique = [];
+		for (element in array) {
+			var present = false;
+			for (unique in unique)
+				if (unique == element)
+					present = true;
+			if (!present)
+				unique.push(element);
+		}
+		return unique;
+    }
+}
+
 interface Task {
 	function part1():Void;
 

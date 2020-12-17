@@ -2,6 +2,7 @@
 -m Main
 
 -L littleBigInt
+-L polygonal-ds
 
 -debug
 --interp

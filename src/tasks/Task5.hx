@@ -26,7 +26,7 @@ class Task5 implements Task {
 		var minY = 0;
 
 		for (r in row.iterator()) {
-            var half = Std.int((maxX + 1 - minX) / 2);
+			var half = Std.int((maxX + 1 - minX) / 2);
 			switch r {
 				case "F".code:
 					maxX -= half;
@@ -36,7 +36,7 @@ class Task5 implements Task {
 		}
 
 		for (c in column.iterator()) {
-            var half = Std.int((maxY + 1 - minY) / 2);
+			var half = Std.int((maxY + 1 - minY) / 2);
 			switch c {
 				case "L".code:
 					maxY -= half;
@@ -55,7 +55,7 @@ class Task5 implements Task {
 	public function part1() {
 		var input = Util.input().map(pos).map(seatId);
 
-        var largest = null;
+		var largest = null;
 		for (seat in input)
 			if (seat > largest || largest == null)
 				largest = seat;
@@ -64,17 +64,17 @@ class Task5 implements Task {
 	}
 
 	public function part2() {
-        final seatIds = Util.input().map(pos).map(seatId);
+		final seatIds = Util.input().map(pos).map(seatId);
 		seatIds.sort(Reflect.compare);
 		var prevId = seatIds.shift();
 		for (id in seatIds) {
 			final expectedId = prevId + 1;
 			if (id != expectedId) {
-                Sys.println(expectedId);
+				Sys.println(expectedId);
 				return;
 			}
 			prevId = id;
 		}
 		throw "seat id not found";
-    }
+	}
 }

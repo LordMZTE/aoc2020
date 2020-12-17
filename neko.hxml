@@ -2,6 +2,7 @@
 -m Main
 
 -L littleBigInt
+-L polygonal-ds
 
 --neko bin/main.n
 --cmd neko bin/main.n
