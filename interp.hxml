@@ -1,8 +1,4 @@
--cp src
--m Main
-
--L littleBigInt
--L polygonal-ds
-
+base.hxml
 -debug
 --interp
+

@@ -7,7 +7,6 @@ using Std;
 using StringTools;
 
 @:structInit
-@:structAccess
 class Passport {
     var byr:Null<String>;
     var iyr:Null<String>;

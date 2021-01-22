@@ -55,7 +55,7 @@ class Task5 implements Task {
     public function part1() {
         var input = Util.input().map(pos).map(seatId);
 
-        var largest = null;
+        var largest:Null<Int> = null;
         for (seat in input)
             if (seat > largest || largest == null)
                 largest = seat;
