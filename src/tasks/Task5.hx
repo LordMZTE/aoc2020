@@ -53,7 +53,10 @@ class Task5 implements Task {
     }
 
     public function part1() {
-        var input = Util.input().map(pos).map(seatId);
+        var input = Util
+            .input()
+            .map(pos)
+            .map(seatId);
 
         var largest:Null<Int> = null;
         for (seat in input)
@@ -64,7 +67,10 @@ class Task5 implements Task {
     }
 
     public function part2() {
-        final seatIds = Util.input().map(pos).map(seatId);
+        final seatIds = Util
+            .input()
+            .map(pos)
+            .map(seatId);
         seatIds.sort(Reflect.compare);
         var prevId = seatIds.shift();
         for (id in seatIds) {
@@ -78,4 +84,3 @@ class Task5 implements Task {
         throw "seat id not found";
     }
 }
-

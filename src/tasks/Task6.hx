@@ -55,9 +55,11 @@ class Task6 implements Task {
 
         var acc = 0;
         for (group in groups)
-            acc += group.flatten().unique().count(q -> group.foreach(m -> m.contains(q))); 
+            acc += group
+                .flatten()
+                .unique()
+                .count(q -> group.foreach(m -> m.contains(q)));
 
         Sys.println(acc);
     }
 }
-

@@ -10,16 +10,14 @@ class Task3 implements Task {
     public function new() {}
 
     function grid():Array<Array<Bool>> {
-        return Util.input().map(row -> [
-            for (c in new StringIterator(row)) {
-                switch (c) {
-                    case "#".code:
-                        true;
-                    default:
-                        false;
-                }
+        return Util.input().map(row -> [for (c in new StringIterator(row)) {
+            switch (c) {
+                case "#".code:
+                    true;
+                default:
+                    false;
             }
-        ]);
+        }]);
     }
 
     function runForSteps(x:Int, y:Int):Int {

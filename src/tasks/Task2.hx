@@ -27,7 +27,12 @@ private class Passwd {
         final min = parts[0];
         final max = parts[1];
 
-        return new Passwd(Std.parseInt(min), Std.parseInt(max), charCode, passwd);
+        return new Passwd(
+            Std.parseInt(min),
+            Std.parseInt(max),
+            charCode,
+            passwd
+        );
     }
 
     public function valid1():Bool {
@@ -51,10 +56,20 @@ class Task2 implements Task {
     public function new() {}
 
     public function part1() {
-        Sys.println(Util.input().map(Passwd.parse).filter(pass -> pass.valid1()).length);
+        Sys.println(Util
+            .input()
+            .map(Passwd.parse)
+            .filter(pass -> pass.valid1())
+            .length
+        );
     }
 
     public function part2() {
-        Sys.println(Util.input().map(Passwd.parse).filter(pass -> pass.valid2()).length);
+        Sys.println(Util
+            .input()
+            .map(Passwd.parse)
+            .filter(pass -> pass.valid2())
+            .length
+        );
     }
 }

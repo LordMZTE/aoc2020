@@ -17,8 +17,13 @@ class Util {
     }
 
     public static macro function input():ExprOf<Array<String>> {
-        var localClass = haxe.macro.Context.getLocalClass().get().name;
-        return macro {Util.inputForClassName($v{localClass});};
+        var localClass = haxe.macro.Context
+            .getLocalClass()
+            .get()
+            .name;
+        return macro {
+            Util.inputForClassName($v{localClass});
+        };
     }
 }
 
